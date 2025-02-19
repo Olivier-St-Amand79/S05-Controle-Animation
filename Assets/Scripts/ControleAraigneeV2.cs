@@ -32,6 +32,7 @@ public class ControleAraigneeV2 : MonoBehaviour
     void OnAttack() /*Les actions de types button peuvent activer instantanement*/
     {
        _animator.SetTrigger("Attaquer");
+
     }
 
     void FixedUpdate()
