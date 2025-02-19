@@ -25,6 +25,13 @@ public class ControleAraigneeV2 : MonoBehaviour
         Vector2 directionAvecVitesse = directionBase.Get<Vector2>() * _vitessePromenade;
         directionInput = new Vector3(directionAvecVitesse.x, 0f, directionAvecVitesse.y);
         _animator.SetFloat("Deplacement", directionInput.magnitude);
+
+        
+    }
+
+    void OnAttack() /*Les actions de types button peuvent activer instantanement*/
+    {
+       _animator.SetTrigger("Attaquer");
     }
 
     void FixedUpdate()
